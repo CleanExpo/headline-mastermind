@@ -1,0 +1,245 @@
+Headline Mastermind HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily News - Headline Mastermind</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #f9f7f1;
+            color: #000;
+            margin: 0;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        header h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 4rem;
+            margin: 20px 0 10px;
+            letter-spacing: 2px;
+        }
+        header nav {
+            margin-bottom: 10px;
+        }
+        header h2, header h3 {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        header h3 {
+            display: flex;
+            justify-content: space-between;
+        }
+        header .hamburger {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+        header .hamburger div {
+            width: 30px;
+            height: 3px;
+            background: #000;
+            margin: 6px 0;
+        }
+        #menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 50px;
+            background: #f9f7f1;
+            border: 1px solid #000;
+            padding: 10px;
+            z-index: 10;
+        }
+        #menu button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 5px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            font-size: 1rem;
+            border-bottom: 1px solid #000;
+        }
+        main {
+            display: flex;
+            border-top: 1px solid #000;
+            padding-top: 20px;
+        }
+        .left, .right {
+            flex: 1;
+            padding: 20px;
+        }
+        .right {
+            border-left: 1px solid #000;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .generated-headlines {
+            margin-top: 20px;
+        }
+        .generated-headlines li {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #000;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-size: 1rem;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 5px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-family: Georgia, serif;
+            font-size: 1rem;
+            background-color: #f9f7f1;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: Georgia, serif;
+        }
+        .headline-title {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>THE DAILY NEWS</h1>
+        <nav>
+            <h2>Hot Topic | Business | Economics | Weather</h2>
+        </nav>
+        <h3>
+            <span>ISSUE NUMBER 20124</span>
+            <span style="text-transform: uppercase;">The World's Best Headline Generator</span>
+            <span>EST. 2024</span>
+        </h3>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="menu">
+            <button onclick="signIn()">Sign In</button>
+            <button onclick="about()">About</button>
+            <button onclick="help()">Help</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="left">
+            <h2 class="headline-title">Local Fireman Rescues Cat from Tree</h2>
+            <img src="https://via.placeholder.com/400x300" alt="Fireman rescuing cat from tree">
+            <p><em>A brave fireman rescues a cat for Mrs. Smith on Maple Street.</em></p>
+        </div>
+
+        <div class="right">
+            <h2>Headline Mastermind</h2>
+            <p>Craft compelling headlines for your content</p>
+            <form id="headlineForm" onsubmit="generateHeadlines(event)">
+                <div class="form-group">
+                    <label for="platform">Select Platform or Add Custom:</label>
+                    <select id="platform" required>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Blog">Blog</option>
+                        <option value="YouTube">YouTube</option>
+                        <option value="Podcast">Podcast</option>
+                        <option value="Newsletter">Newsletter</option>
+                        <option value="">Other</option>
+                    </select>
+                    <input type="text" id="customPlatform" placeholder="e.g., TikTok, LinkedIn">
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">Enter Topic:</label>
+                    <input type="text" id="topic" placeholder="e.g., Beating the Rise of Electricity Cost" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="audience">Select Audience or Add Custom:</label>
+                    <select id="audience" required>
+                        <option value="Parents">Parents</option>
+                        <option value="Busy Professionals">Busy Professionals</option>
+                        <option value="Aspiring Entrepreneurs">Aspiring Entrepreneurs</option>
+                        <option value="Students">Students</option>
+                        <option value="Seniors">Seniors</option>
+                        <option value="">Other</option>
+                    </select>
+                    <input type="text" id="customAudience" placeholder="e.g., Eco-conscious Consumers">
+                </div>
+
+                <div class="form-group">
+                    <label for="angle">Select Angle or Add Custom:</label>
+                    <select id="angle" required>
+                        <option value="Steps to beat the price rise">Steps to beat the price rise</option>
+                        <option value="How-to Guide">How-to Guide</option>
+                        <option value="Listicle">Listicle</option>
+                        <option value="Case Study">Case Study</option>
+                        <option value="Interview">Interview</option>
+                        <option value="Opinion Piece">Opinion Piece</option>
+                        <option value="">Other</option>
+                    </select>
+                    <input type="text" id="customAngle" placeholder="e.g., Personal Story, Satire">
+                </div>
+
+                <div class="form-group">
+                    <label for="count">Number of Headlines:</label>
+                    <input type="number" id="count" min="1" max="10" value="10" required>
+                </div>
+
+                <button type="submit">Generate Headlines</button>
+            </form>
+
+            <div class="generated-headlines">
+                <h3>Generated Headlines:</h3>
+                <ul id="headlinesList"></ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function generateHeadlines(event) {
+            event.preventDefault();
+            
+            const platform = document.getElementById('platform').value || document.getElementById('customPlatform').value;
+            const topic = document.getElementById('topic').value;
+            const audience = document.getElementById('audience').value || document.getElementById('customAudience').value;
+            const angle = document.getElementById('angle').value || document.getElementById('customAngle').value;
+            const count = document.getElementById('count').value;
+            

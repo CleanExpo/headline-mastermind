@@ -1,0 +1,159 @@
+Headline Mastermind style.css
+
+body {
+    font-family: Georgia, serif;
+    background-color: #f9f7f1;
+    color: #000;
+    margin: 0;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 4rem;
+    margin: 20px 0 10px;
+    letter-spacing: 2px;
+}
+
+header nav {
+    margin-bottom: 10px;
+}
+
+header h2, header h3 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+header h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .hamburger {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+header .hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    margin: 6px 0;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background: #f9f7f1;
+    border: 1px solid #000;
+    padding: 10px;
+    z-index: 10;
+}
+
+#menu button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    border-bottom: 1px solid #000;
+}
+
+main {
+    padding-top: 20px;
+}
+
+.left, .right {
+    flex: 1;
+    padding: 20px;
+}
+
+.right {
+    border-left: 1px solid #000;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.generated-headlines {
+    margin-top: 20px;
+}
+
+.generated-headlines li {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #000;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    background-color: #f9f7f1;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: Georgia, serif;
+}
+
+.headline-title {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.about-section {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}

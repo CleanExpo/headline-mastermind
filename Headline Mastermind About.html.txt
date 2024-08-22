@@ -1,0 +1,43 @@
+Headline Mastermind About.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Headline Mastermind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>THE DAILY NEWS</h1>
+        <nav>
+            <h2>Hot Topic | Business | Economics | Weather</h2>
+        </nav>
+        <h3>
+            <span>ISSUE NUMBER 20124</span>
+            <span style="text-transform: uppercase;">About Headline Mastermind</span>
+            <span>EST. 2024</span>
+        </h3>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>About Headline Mastermind</h2>
+            <p>
+                Headline Mastermind is an intuitive tool designed to help content creators generate compelling and effective headlines for various platforms. Whether you're crafting content for Social Media, Blogs, or other platforms, this tool allows you to quickly create headlines that resonate with your target audience.
+            </p>
+            <p>
+                By selecting a platform, defining your topic, choosing your audience, and specifying the content angle, Headline Mastermind simplifies the headline creation process. Ideal for marketers, writers, and content creators, this tool ensures your headlines capture attention and align with your content strategy.
+            </p>
+            <p>
+                Explore the Headline Mastermind tool today and elevate your content's impact with powerful, targeted headlines.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Daily News. All rights reserved.</p>
+    </footer>
+</body>
+</html>
