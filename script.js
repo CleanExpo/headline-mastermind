@@ -1,5 +1,3 @@
-NEW Script.js
-
 document.getElementById('headlineForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -15,9 +13,9 @@ document.getElementById('headlineForm').addEventListener('submit', function(even
     const region = document.getElementById('region').value;
     const country = document.getElementById('country').value;
 
-    // Generate headline (placeholder logic)
-    const headline = `Amazing ${headlineType} for ${businessName}! ${keywords} - ${tone} tone.`;
-
+    // Example headline generation logic
+    const headline = `${headlineType}: ${keywords} to Captivate ${targetAudience}! ${businessName} in ${region} is ${tone} and Engaging.`;
+    
     // Display the headline
     document.getElementById('headlineText').innerText = headline;
     document.getElementById('headlineOutput').style.display = 'block';
